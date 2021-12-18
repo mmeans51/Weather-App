@@ -17,3 +17,14 @@ var sevenPm = $("#19pm");
 var hour = moment().hours();
 var userInput;
 var hourSpan;
+// var hourString = $(".hour").text().split(" ");
+
+// Date and Hour
+
+var interval = setInterval(function() {
+    var momentNow = moment();
+    $('#currentDay').html(momentNow.format('YYYY MMMM DD') + ' '
+                        + momentNow.format('dddd')
+                         .substring(0,3).toUpperCase());
+    $('#currentDay').html(currentDate + " " + momentNow.format('hh:mm:ss A'));
+  }, 100);
